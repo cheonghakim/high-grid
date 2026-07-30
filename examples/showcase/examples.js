@@ -38,8 +38,8 @@ export const EXAMPLES = [
     category: 'Getting Started',
     label: 'Basic Grid',
     desc: 'createGrid으로 가장 단순한 그리드를 만듭니다.',
-    code: `import { createGrid } from 'high-grid';
-import 'high-grid/styles/grid.css';
+    code: `import { createGrid } from 'zenith-grid';
+import 'zenith-grid/styles/grid.css';
 
 const grid = createGrid(document.getElementById('grid'), {
   columns: [
@@ -770,7 +770,7 @@ grid.resumeLiveUpdates();`,
     category: 'Export',
     label: 'CSV & Excel Export',
     desc: 'downloadCsv / downloadXlsx로 현재 데이터를 내보냅니다.',
-    code: `import { createGrid, createXlsxExportPlugin } from 'high-grid';
+    code: `import { createGrid, createXlsxExportPlugin } from 'zenith-grid';
 
 const grid = createGrid(el, {
   columns: [...],
@@ -801,7 +801,7 @@ grid.downloadCsv({ fileName: 'selected.csv', onlySelected: true });`,
         ],
         rows: makeRows(100),
         rowKey: 'id',
-        plugins: [{ plugin: createXlsxExportPlugin({ fileName: 'highgrid-export.xlsx' }) }],
+        plugins: [{ plugin: createXlsxExportPlugin({ fileName: 'zenith-grid-export.xlsx' }) }],
       });
       // 버튼 UI
       const bar = document.createElement('div');
@@ -809,11 +809,11 @@ grid.downloadCsv({ fileName: 'selected.csv', onlySelected: true });`,
       const btnCsv = document.createElement('button');
       btnCsv.textContent = '⬇ CSV';
       btnCsv.style.cssText = 'padding:5px 12px;border-radius:5px;border:1px solid #38bdf8;background:none;color:#38bdf8;cursor:pointer;font-size:12px;';
-      btnCsv.onclick = () => grid.downloadCsv({ fileName: 'highgrid.csv' });
+      btnCsv.onclick = () => grid.downloadCsv({ fileName: 'zenith-grid.csv' });
       const btnXlsx = document.createElement('button');
       btnXlsx.textContent = '⬇ Excel';
       btnXlsx.style.cssText = btnCsv.style.cssText;
-      btnXlsx.onclick = () => grid.downloadXlsx?.({ fileName: 'highgrid.xlsx' });
+      btnXlsx.onclick = () => grid.downloadXlsx?.({ fileName: 'zenith-grid.xlsx' });
       bar.appendChild(btnCsv);
       bar.appendChild(btnXlsx);
       el.parentElement.insertBefore(bar, el);
@@ -878,7 +878,7 @@ grid.downloadCsv({ fileName: 'selected.csv', onlySelected: true });`,
     category: 'Enterprise',
     label: 'Sparklines',
     desc: '셀 안에 미니 라인/바 차트를 렌더링합니다.',
-    code: `import { createGrid, createSparklinePlugin } from 'high-grid';
+    code: `import { createGrid, createSparklinePlugin } from 'zenith-grid';
 
 const grid = createGrid(el, {
   columns: [
@@ -924,7 +924,7 @@ const grid = createGrid(el, {
     category: 'Enterprise',
     label: 'Context Menu',
     desc: '우클릭 컨텍스트 메뉴를 커스터마이징합니다.',
-    code: `import { createGrid, createContextMenuPlugin } from 'high-grid';
+    code: `import { createGrid, createContextMenuPlugin } from 'zenith-grid';
 
 const grid = createGrid(el, {
   columns: [...],
